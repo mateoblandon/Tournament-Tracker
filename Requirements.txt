@@ -1,0 +1,24 @@
+Requirements
+1. Track games played and their outcome (who won).
+2. Multiples competitors play in the tournament.
+3. Creates a tournament pls (who plays in what order).
+4. Schedules games. 
+5. A single loss eliminates a player.
+6. The last player standing is the winner.
+
+Questions:
+1. How many players will the tournament handle? --> variable.
+2. If a tournament has less than the full complement of players, how do we handle it? --> skip one match randomly.
+3. Should the ordering of who play each other be random or ordered by input order. --> random.
+4. Should we schedule the or are they just played whenever. --> whenever the players want to play.
+5. If the games are scheduled, how does the system know hen to schedule games for? --> they are not scheduled.
+6. If the games ares played whenever, can a game from the secod round be played before the first round is complete? --> no. Each round should be fullt completed befores the next round is displayed.
+7. Does the suystem need to store a score of some kind or just who won? --> just a number for each player. Winner 1 ad loser 0.
+8. What type of front-end should sys have? --> a desktop for now.
+9. where will the data be stored? --> ideally in SQL server, but in this case a text file.
+10. Will this system handle entry fees, prizes or other payouts --> yes. the total cash amount should not exceed the income from the tournament.
+11. What type of reporting is needed? --> a simple report specifying the outcome of the games per round.
+12. Who can fill in teh results of a game? --> anyonw using the application should be able to sill in the game scores.
+13. Are there varying levels of access? --> no.
+14. Should this system contact users about upcoming games? --> yes, the system should email user that they are due to play in a roun as wel as who they are schduled to play.
+15. Is each player on their own or can teams use this tournament tracker? shpuld be able to handle the addition of other member. Teams should also be able to anem their team. 
