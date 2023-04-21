@@ -1,4 +1,4 @@
-Requirements
+Requirements:
 1. Track games played and their outcome (who won).
 2. Multiples competitors play in the tournament.
 3. Creates a tournament pls (who plays in what order).
@@ -18,7 +18,21 @@ Questions:
 9. where will the data be stored? --> ideally in SQL server, but in this case a text file.
 10. Will this system handle entry fees, prizes or other payouts --> yes. the total cash amount should not exceed the income from the tournament.
 11. What type of reporting is needed? --> a simple report specifying the outcome of the games per round.
-12. Who can fill in teh results of a game? --> anyonw using the application should be able to sill in the game scores.
+12. Who can fill in teh results of a game? --> anyone using the application should be able to sill in the game scores.
 13. Are there varying levels of access? --> no.
 14. Should this system contact users about upcoming games? --> yes, the system should email user that they are due to play in a roun as wel as who they are schduled to play.
 15. Is each player on their own or can teams use this tournament tracker? shpuld be able to handle the addition of other member. Teams should also be able to anem their team. 
+
+Big Picture Design:
+1. Structure: Windows Forms application and class library.
+2. Data: SQL and/or text file.
+3. Users: one at a time on one application.
+
+Key concepts:
+1. Email
+2. SQL
+3. Custom events
+4. Error handling
+5. Interfaces
+6. Random ordering
+7. Texting
