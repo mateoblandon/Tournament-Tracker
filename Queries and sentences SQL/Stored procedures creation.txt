@@ -1,0 +1,19 @@
+create procedure spPeople_GetAll
+as
+select * from People;
+
+create procedure spPrizes_GetByTournament
+@TournamentId int
+as
+select * from Prizes inner join TournamentPrizes on Prizes.id = TournamentPrizes.PrizeId
+where TournamentPrizes.TournamentId = @TournamentId;
+
+create procedure spTeam_GetByTournament
+@TournamentId int
+as
+select * from Teams inner join TournamentEntries on Teams.id = TournamentEntries.TeamId
+where TournamentEntries.TournamentId = @TournamentId;
+
+create procedure spTournaments_GetAll
+as
+select * from  Tournaments;
