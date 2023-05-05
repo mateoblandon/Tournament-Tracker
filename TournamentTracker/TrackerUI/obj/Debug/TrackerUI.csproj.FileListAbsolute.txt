@@ -13,3 +13,6 @@ C:\Users\blandonm\Documents\Cursos\TimCorey\Tournament-Tracker\TournamentTracker
 C:\Users\blandonm\Documents\Cursos\TimCorey\Tournament-Tracker\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.CreateTeamForm.resources
 C:\Users\blandonm\Documents\Cursos\TimCorey\Tournament-Tracker\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.CreateTournamentForm.resources
 C:\Users\blandonm\Documents\Cursos\TimCorey\Tournament-Tracker\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.TournamentDashboardForm.resources
+C:\Users\blandonm\Documents\Cursos\TimCorey\Tournament-Tracker\TournamentTracker\TrackerUI\bin\Debug\TrackerLibrary.dll
+C:\Users\blandonm\Documents\Cursos\TimCorey\Tournament-Tracker\TournamentTracker\TrackerUI\bin\Debug\TrackerLibrary.pdb
+C:\Users\blandonm\Documents\Cursos\TimCorey\Tournament-Tracker\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.csproj.CopyComplete
