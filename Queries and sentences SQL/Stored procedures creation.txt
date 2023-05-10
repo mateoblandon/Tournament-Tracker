@@ -1,24 +1,23 @@
 create procedure spPeople_GetAll
 as
 select * from People;
-
+====================================
 create procedure spPrizes_GetByTournament
 @TournamentId int
 as
 select * from Prizes inner join TournamentPrizes on Prizes.id = TournamentPrizes.PrizeId
 where TournamentPrizes.TournamentId = @TournamentId;
-
+================================================
 create procedure spTeam_GetByTournament
 @TournamentId int
 as
 select * from Teams inner join TournamentEntries on Teams.id = TournamentEntries.TeamId
 where TournamentEntries.TournamentId = @TournamentId;
-
+=======================================================
 create procedure spTournaments_GetAll
 as
 select * from  Tournaments;
-
-
+==================================================
 CREATE PROCEDURE [dbo].[spPeople_Insert]
 	@FirstName nvarchar(100),
 	@LastName nvarchar(100),
@@ -30,5 +29,38 @@ BEGIN
 	SET NOCOUNT ON;
 	insert into [dbo].[People] (FirstName, LastName, EmailAddress, CellphoneNumber) values (@FirstName, @LastName, @EmailAddress, @CellphoneNumber);
 	select @id = SCOPE_IDENTITY();
+END
+GO
+==================================
+CREATE PROCEDURE [dbo].[spTeams_Insert] 
+	@TeamName nvarchar(100),
+	@id int = 0 output
+AS
+BEGIN
+	SET NOCOUNT ON;
+	insert into [dbo].[Teams] (TeamName) values (@TeamName);
+	select @id = SCOPE_IDENTITY();
+END
+GO
+==============================
+CREATE PROCEDURE [dbo].[spTeamMembers_Insert] 
+	@TeamId int,
+	@PersonId int,
+	@id int = 0 output
+AS
+BEGIN
+	SET NOCOUNT ON;
+	insert into [dbo].[TeamMembers] (TeamId, PersonId) values (@TeamId, @PersonId);
+	select @id = SCOPE_IDENTITY();
+END
+GO
+======================================
+CREATE PROCEDURE [dbo].[spTeam_GetByTournament]
+	@TournamentId int
+AS
+BEGIN
+	SET NOCOUNT ON;
+	select * from Teams inner join TournamentEntries on Teams.id = TournamentEntries.TeamId
+where TournamentEntries.TournamentId = @TournamentId;
 END
 GO
