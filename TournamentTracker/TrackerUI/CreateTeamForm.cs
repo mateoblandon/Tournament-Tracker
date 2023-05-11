@@ -16,11 +16,13 @@ namespace TrackerUI
   {
     private List<PersonModel> availableTeamMembers = GlobalConfig.Connection.GetPerson_All();
     private List<PersonModel> selectedTeamMembers = new List<PersonModel>();
-    public CreateTeamForm()
+    private ITeamRequester callingForm;
+    public CreateTeamForm(ITeamRequester caller)
     {
       InitializeComponent();
+      callingForm = caller;
       //CreateDataSample();
-      WireUpList();
+      WireUpLists();
     }
 
 
@@ -32,7 +34,7 @@ namespace TrackerUI
       selectedTeamMembers.Add(new PersonModel { FirstName = "Jane", LastName = "Smith" });
       selectedTeamMembers.Add(new PersonModel { FirstName = "Bill", LastName = "Jones" });
     }
-    private void WireUpList()
+    private void WireUpLists()
     {
       selectTeamMemberDropDown.DataSource = null;
       selectTeamMemberDropDown.DataSource = availableTeamMembers;
@@ -55,7 +57,7 @@ namespace TrackerUI
 
         p = GlobalConfig.Connection.CreatePerson(p);
         selectedTeamMembers.Add(p);
-        WireUpList();
+        WireUpLists();
 
         firstNameValue.Text = "";
         lastNameValue.Text = "";
@@ -97,7 +99,7 @@ namespace TrackerUI
       {
         availableTeamMembers.Remove(p);
         selectedTeamMembers.Add(p);
-        WireUpList(); 
+        WireUpLists(); 
       }
     }
 
@@ -108,7 +110,7 @@ namespace TrackerUI
       {
         selectedTeamMembers.Remove(p);
         availableTeamMembers.Add(p);
-        WireUpList(); 
+        WireUpLists(); 
       }
     }
 
@@ -117,7 +119,9 @@ namespace TrackerUI
       TeamModel t = new TeamModel();
       t.TeamName = teamNameValue.Text;
       t.TeamMembers = selectedTeamMembers;
-      t = GlobalConfig.Connection.CreateTeam(t);
+      GlobalConfig.Connection.CreateTeam(t);
+      callingForm.TeamComplete(t);
+      this.Close();
     }
   }
 }
