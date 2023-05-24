@@ -9,6 +9,11 @@ namespace TrackerLibrary.Models
   public class MatchupEntryModel
   {
         /// <summary>
+        /// Represents one team in the Marchup Entry Model.
+        /// </summary>
+        public int Id { get; set; }
+
+        /// <summary>
         /// Represents one team in the marchup.
         /// </summary>
         public TeamModel TeamCompeting { get; set; }

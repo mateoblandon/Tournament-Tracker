@@ -31,18 +31,24 @@ CREATE TABLE TeamMembers (
 
 CREATE TABLE Matchups (
     id int IDENTITY(1,1) NOT NULL,
-    WinnerId int NOT NULL,
+	TournamentId int NOT NULL,
+    WinnerId int NULL,
 	MatchupRound int NOT NULL,
-	PRIMARY KEY (id)
+	PRIMARY KEY (id),
+	FOREIGN KEY (TournamentId) REFERENCES [dbo].[Tournaments] (id),
+	FOREIGN KEY (WinnerId) REFERENCES [dbo].[Teams] (id)
 );
 
-CREATE TABLE MatchupEntries (
+CREATE TABLE MatchupEntries(
     id int IDENTITY(1,1) NOT NULL,
     MatchupId int NOT NULL,
-	ParentMatchupId int NOT NULL,
-	TeamCompetingId int NOT NULL,
-	Score float NOT NULL,
-	PRIMARY KEY (id)
+	ParentMatchupId int NULL,
+	TeamCompetingId int NULL,
+	Score float NULL,
+	PRIMARY KEY (id),
+	FOREIGN KEY (MatchupId) REFERENCES [dbo].[Matchups] (id),
+	FOREIGN KEY (ParentMatchupId) REFERENCES [dbo].[Matchups] (id),
+	FOREIGN KEY (TeamCompetingId) REFERENCES [dbo].[Teams] (id)
 );
 
 CREATE TABLE TournamentPrizes (
