@@ -4,7 +4,6 @@ C:\Users\blandonm\Documents\Cursos\TimCorey\Tournament-Tracker\TournamentTracker
 C:\Users\blandonm\Documents\Cursos\TimCorey\Tournament-Tracker\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.csproj.AssemblyReference.cache
 C:\Users\blandonm\Documents\Cursos\TimCorey\Tournament-Tracker\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.csproj.SuggestedBindingRedirects.cache
 C:\Users\blandonm\Documents\Cursos\TimCorey\Tournament-Tracker\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.Properties.Resources.resources
-C:\Users\blandonm\Documents\Cursos\TimCorey\Tournament-Tracker\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.TournamentTracker.resources
 C:\Users\blandonm\Documents\Cursos\TimCorey\Tournament-Tracker\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.csproj.GenerateResource.cache
 C:\Users\blandonm\Documents\Cursos\TimCorey\Tournament-Tracker\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.csproj.CoreCompileInputs.cache
 C:\Users\blandonm\Documents\Cursos\TimCorey\Tournament-Tracker\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.exe
@@ -18,3 +17,4 @@ C:\Users\blandonm\Documents\Cursos\TimCorey\Tournament-Tracker\TournamentTracker
 C:\Users\blandonm\Documents\Cursos\TimCorey\Tournament-Tracker\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.csproj.CopyComplete
 C:\Users\blandonm\Documents\Cursos\TimCorey\Tournament-Tracker\TournamentTracker\TrackerUI\bin\Debug\Dapper.dll
 C:\Users\blandonm\Documents\Cursos\TimCorey\Tournament-Tracker\TournamentTracker\TrackerUI\bin\Debug\Dapper.xml
+C:\Users\blandonm\Documents\Cursos\TimCorey\Tournament-Tracker\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.TournamentViewerForm.resources

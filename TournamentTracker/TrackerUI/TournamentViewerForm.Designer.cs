@@ -1,6 +1,6 @@
 ﻿namespace TrackerUI
 {
-  partial class TournamentTracker
+  partial class TournamentViewerForm
   {
     /// <summary>
     /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
     /// </summary>
     private void InitializeComponent()
     {
-      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TournamentTracker));
+      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TournamentViewerForm));
       this.headerLabel = new System.Windows.Forms.Label();
       this.tournamentName = new System.Windows.Forms.Label();
       this.roundLabel = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@
       this.headerLabel.AutoSize = true;
       this.headerLabel.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.headerLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-      this.headerLabel.Location = new System.Drawing.Point(99, 57);
+      this.headerLabel.Location = new System.Drawing.Point(42, 26);
       this.headerLabel.Name = "headerLabel";
       this.headerLabel.Size = new System.Drawing.Size(197, 45);
       this.headerLabel.TabIndex = 0;
@@ -61,7 +61,7 @@
       this.tournamentName.AutoSize = true;
       this.tournamentName.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.tournamentName.ForeColor = System.Drawing.Color.DodgerBlue;
-      this.tournamentName.Location = new System.Drawing.Point(302, 57);
+      this.tournamentName.Location = new System.Drawing.Point(245, 26);
       this.tournamentName.Name = "tournamentName";
       this.tournamentName.Size = new System.Drawing.Size(136, 45);
       this.tournamentName.TabIndex = 1;
@@ -71,7 +71,7 @@
       // 
       this.roundLabel.AutoSize = true;
       this.roundLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-      this.roundLabel.Location = new System.Drawing.Point(102, 143);
+      this.roundLabel.Location = new System.Drawing.Point(45, 112);
       this.roundLabel.Name = "roundLabel";
       this.roundLabel.Size = new System.Drawing.Size(73, 30);
       this.roundLabel.TabIndex = 2;
@@ -80,17 +80,18 @@
       // roundDropDown
       // 
       this.roundDropDown.FormattingEnabled = true;
-      this.roundDropDown.Location = new System.Drawing.Point(193, 135);
+      this.roundDropDown.Location = new System.Drawing.Point(136, 104);
       this.roundDropDown.Name = "roundDropDown";
-      this.roundDropDown.Size = new System.Drawing.Size(309, 38);
+      this.roundDropDown.Size = new System.Drawing.Size(273, 38);
       this.roundDropDown.TabIndex = 3;
+      this.roundDropDown.SelectedIndexChanged += new System.EventHandler(this.roundDropDown_SelectedIndexChanged);
       // 
       // unplayedOnlyCheckbox
       // 
       this.unplayedOnlyCheckbox.AutoSize = true;
       this.unplayedOnlyCheckbox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.unplayedOnlyCheckbox.ForeColor = System.Drawing.Color.DodgerBlue;
-      this.unplayedOnlyCheckbox.Location = new System.Drawing.Point(193, 209);
+      this.unplayedOnlyCheckbox.Location = new System.Drawing.Point(136, 178);
       this.unplayedOnlyCheckbox.Name = "unplayedOnlyCheckbox";
       this.unplayedOnlyCheckbox.Size = new System.Drawing.Size(165, 34);
       this.unplayedOnlyCheckbox.TabIndex = 4;
@@ -102,16 +103,16 @@
       this.matchupListBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
       this.matchupListBox.FormattingEnabled = true;
       this.matchupListBox.ItemHeight = 30;
-      this.matchupListBox.Location = new System.Drawing.Point(107, 279);
+      this.matchupListBox.Location = new System.Drawing.Point(50, 248);
       this.matchupListBox.Name = "matchupListBox";
-      this.matchupListBox.Size = new System.Drawing.Size(395, 362);
+      this.matchupListBox.Size = new System.Drawing.Size(359, 332);
       this.matchupListBox.TabIndex = 5;
       // 
       // teamOneName
       // 
       this.teamOneName.AutoSize = true;
       this.teamOneName.ForeColor = System.Drawing.Color.DodgerBlue;
-      this.teamOneName.Location = new System.Drawing.Point(649, 279);
+      this.teamOneName.Location = new System.Drawing.Point(592, 248);
       this.teamOneName.Name = "teamOneName";
       this.teamOneName.Size = new System.Drawing.Size(131, 30);
       this.teamOneName.TabIndex = 6;
@@ -121,7 +122,7 @@
       // 
       this.teamOneScoreLabel.AutoSize = true;
       this.teamOneScoreLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-      this.teamOneScoreLabel.Location = new System.Drawing.Point(649, 335);
+      this.teamOneScoreLabel.Location = new System.Drawing.Point(592, 304);
       this.teamOneScoreLabel.Name = "teamOneScoreLabel";
       this.teamOneScoreLabel.Size = new System.Drawing.Size(64, 30);
       this.teamOneScoreLabel.TabIndex = 7;
@@ -129,23 +130,23 @@
       // 
       // teamOneScoreValue
       // 
-      this.teamOneScoreValue.Location = new System.Drawing.Point(754, 330);
+      this.teamOneScoreValue.Location = new System.Drawing.Point(697, 299);
       this.teamOneScoreValue.Name = "teamOneScoreValue";
-      this.teamOneScoreValue.Size = new System.Drawing.Size(231, 35);
+      this.teamOneScoreValue.Size = new System.Drawing.Size(195, 35);
       this.teamOneScoreValue.TabIndex = 8;
       // 
       // teamTwoScoreValue
       // 
-      this.teamTwoScoreValue.Location = new System.Drawing.Point(754, 543);
+      this.teamTwoScoreValue.Location = new System.Drawing.Point(697, 512);
       this.teamTwoScoreValue.Name = "teamTwoScoreValue";
-      this.teamTwoScoreValue.Size = new System.Drawing.Size(231, 35);
+      this.teamTwoScoreValue.Size = new System.Drawing.Size(195, 35);
       this.teamTwoScoreValue.TabIndex = 11;
       // 
       // teamTwoScoreLabel
       // 
       this.teamTwoScoreLabel.AutoSize = true;
       this.teamTwoScoreLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-      this.teamTwoScoreLabel.Location = new System.Drawing.Point(649, 548);
+      this.teamTwoScoreLabel.Location = new System.Drawing.Point(592, 517);
       this.teamTwoScoreLabel.Name = "teamTwoScoreLabel";
       this.teamTwoScoreLabel.Size = new System.Drawing.Size(64, 30);
       this.teamTwoScoreLabel.TabIndex = 10;
@@ -155,7 +156,7 @@
       // 
       this.teamTwoName.AutoSize = true;
       this.teamTwoName.ForeColor = System.Drawing.Color.DodgerBlue;
-      this.teamTwoName.Location = new System.Drawing.Point(649, 492);
+      this.teamTwoName.Location = new System.Drawing.Point(592, 461);
       this.teamTwoName.Name = "teamTwoName";
       this.teamTwoName.Size = new System.Drawing.Size(130, 30);
       this.teamTwoName.TabIndex = 9;
@@ -165,7 +166,7 @@
       // 
       this.versusLabel.AutoSize = true;
       this.versusLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-      this.versusLabel.Location = new System.Drawing.Point(749, 421);
+      this.versusLabel.Location = new System.Drawing.Point(692, 390);
       this.versusLabel.Name = "versusLabel";
       this.versusLabel.Size = new System.Drawing.Size(53, 30);
       this.versusLabel.TabIndex = 12;
@@ -178,19 +179,19 @@
       this.scoreButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
       this.scoreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.scoreButton.ForeColor = System.Drawing.Color.DodgerBlue;
-      this.scoreButton.Location = new System.Drawing.Point(1000, 421);
+      this.scoreButton.Location = new System.Drawing.Point(943, 390);
       this.scoreButton.Name = "scoreButton";
-      this.scoreButton.Size = new System.Drawing.Size(114, 49);
+      this.scoreButton.Size = new System.Drawing.Size(78, 40);
       this.scoreButton.TabIndex = 13;
       this.scoreButton.Text = "Score";
       this.scoreButton.UseVisualStyleBackColor = true;
       // 
-      // TournamentTracker
+      // TournamentViewerForm
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackColor = System.Drawing.Color.White;
-      this.ClientSize = new System.Drawing.Size(1199, 684);
+      this.ClientSize = new System.Drawing.Size(1163, 675);
       this.Controls.Add(this.scoreButton);
       this.Controls.Add(this.versusLabel);
       this.Controls.Add(this.teamTwoScoreValue);
@@ -208,7 +209,7 @@
       this.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
       this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-      this.Name = "TournamentTracker";
+      this.Name = "TournamentViewerForm";
       this.Text = "Tournament Viewer";
       this.ResumeLayout(false);
       this.PerformLayout();
